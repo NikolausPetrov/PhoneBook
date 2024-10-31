@@ -1,6 +1,7 @@
 package com.example.phonebook;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
@@ -21,6 +22,9 @@ public class PhoneBook {
         return null;
     }
     public String findByName(String name) {
+        return null;
+    }
+    public List<String> printAllNames() {
         return null;
     }
 }
