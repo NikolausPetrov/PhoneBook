@@ -3,6 +3,7 @@ package com.example.phonebook;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
     private Map<String, String> contacts = new HashMap<>();
@@ -25,6 +26,6 @@ public class PhoneBook {
         return null;
     }
     public List<String> printAllNames() {
-        return null;
+        return contacts.keySet().stream().sorted().collect(Collectors.toList());
     }
 }
