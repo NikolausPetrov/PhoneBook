@@ -1,8 +1,8 @@
 package com.example.phonebook;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class PhoneBook {
@@ -14,6 +14,7 @@ public class PhoneBook {
         }
         return contacts.size();
     }
+
     public String findByNumber(String number) {
         for (Map.Entry<String, String> entry : contacts.entrySet()) {
             if (entry.getValue().equals(number)) {
@@ -22,9 +23,11 @@ public class PhoneBook {
         }
         return null;
     }
+
     public String findByName(String name) {
-        return null;
+        return contacts.get(name);
     }
+
     public List<String> printAllNames() {
         return contacts.keySet().stream().sorted().collect(Collectors.toList());
     }
